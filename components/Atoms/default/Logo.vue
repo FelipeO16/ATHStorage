@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Teste</h1>
-  </div>
+  <img class="logo" src="@/static/ath_logo.png" alt="Aussie Tiny Houses Logo" />
 </template>
 
 <script lang="ts">
@@ -11,7 +9,7 @@ export default Vue.extend({})
 </script>
 
 <style scoped>
-div {
-  @apply w-screen h-screen flex justify-center items-center;
+.logo {
+  @apply w-full h-full;
 }
 </style>
