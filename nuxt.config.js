@@ -64,7 +64,15 @@ export default {
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {},
+    build: {
+        transpile: [
+            '@fortawesome/fontawesome-svg-core',
+            '@fortawesome/pro-solid-svg-icons',
+            '@fortawesome/pro-regular-svg-icons',
+            '@fortawesome/pro-light-svg-icons',
+            '@fortawesome/free-brands-svg-icons'
+        ]
+    },
     server: {
         host: '0.0.0.0' // default: localhost
     }
