@@ -26,7 +26,7 @@ export default {
         '@nuxt/typescript-build',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
-        // '@nuxtjs/fontawesome'
+        '@nuxtjs/fontawesome'
     ],
 
     fontawesome: {
@@ -71,7 +71,12 @@ export default {
             '@fortawesome/pro-regular-svg-icons',
             '@fortawesome/pro-light-svg-icons',
             '@fortawesome/free-brands-svg-icons'
-        ]
+        ],
+        postcss: {
+            plugins: {
+                "postcss-custom-properties": false
+            },
+        },
     },
     server: {
         host: '0.0.0.0' // default: localhost
