@@ -4,6 +4,7 @@
     <Sidebar />
     <ProductList />
     <AddProduct />
+    <ProductCountMain />
   </div>
 </template>
 

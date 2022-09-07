@@ -105,11 +105,11 @@ export default Vue.extend({
 
 .add-product-form,
 .success {
-  @apply w-full h-full flex flex-col justify-center items-center gap-5 bg-cloud-burst-500 shadow-xl rounded-xl p-4 relative;
+  @apply w-full h-full flex flex-col justify-center items-center gap-5 bg-cloud-burst-500 dark:bg-transparent dark:border dark:border-royal-blue-500 shadow-xl rounded-xl p-4 relative;
 }
 
 .add-product-form h1 {
-  @apply absolute -top-7  bg-black bg-opacity-20 p-2 text-3xl text-royal-blue-500 text-center uppercase font-sans tracking-wider rounded-lg;
+  @apply absolute -top-7  bg-black bg-opacity-20 p-2 text-3xl text-royal-blue-500 text-center uppercase dark:bg-french-gray-500 font-sans tracking-wider rounded-lg;
 }
 
 .add-product-form .input-group {
@@ -121,7 +121,7 @@ export default Vue.extend({
 }
 
 .input {
-  @apply w-3/6 h-10 flex justify-center relative border p-2 rounded-md border-royal-blue-500 shadow-xl;
+  @apply w-3/6 h-10 flex justify-center relative border p-2 rounded-md border-royal-blue-500 shadow-xl dark:text-royal-blue-500;
 }
 
 .add-product-form label {
@@ -129,11 +129,11 @@ export default Vue.extend({
 }
 
 .add-product-form input {
-  @apply text-white bg-transparent w-full;
+  @apply text-white bg-transparent w-full dark:text-royal-blue-500;
 }
 
 .add-product-form input:focus {
-  @apply text-white bg-transparent outline-none;
+  @apply text-white bg-transparent outline-none dark:text-royal-blue-500;
 }
 
 .input-btn {
@@ -141,11 +141,11 @@ export default Vue.extend({
 }
 
 .confirm {
-  @apply text-jungle-green-500 hover:text-jungle-green-400 w-full h-full hover:bg-black hover:bg-opacity-20;
+  @apply text-jungle-green-500 hover:text-jungle-green-400 dark:hover:text-green-500 dark:hover:bg-transparent dark:hover:shadow-lg w-full h-full hover:bg-black hover:bg-opacity-20;
 }
 
 .cancel {
-  @apply text-amaranth-500 hover:text-amaranth-400  w-full h-full hover:bg-black hover:bg-opacity-20;
+  @apply text-amaranth-500 hover:text-amaranth-400 dark:hover:text-red-500 dark:hover:bg-transparent dark:hover:shadow-lg w-full h-full hover:bg-black hover:bg-opacity-20;
 }
 
 .success-header {

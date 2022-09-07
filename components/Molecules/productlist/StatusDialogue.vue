@@ -1,6 +1,10 @@
 <template>
   <div class="dialogue">
     <div class="dialogue-box">
+      <img
+        class="qr"
+        :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${item.code}`"
+      />
       <div class="dialogue-text" v-if="item.status == 'Bad'">
         Add <span>{{ item.description }} </span>to cart?
       </div>
@@ -85,13 +89,13 @@ export default Vue.extend({
 /* Dialogue */
 
 .dialogue {
-  @apply absolute w-5/6 h-5/6 flex flex-col justify-center items-center bg-opacity-20 bg-black overflow-hidden;
+  @apply absolute w-5/6 h-5/6 flex flex-col justify-center items-center bg-opacity-40 bg-black overflow-hidden;
 }
 
 /* Dialogue box */
 
 .dialogue-box {
-  @apply h-1/4 flex flex-col justify-around gap-4 items-center rounded-xl border border-royal-blue-500 p-4 bg-cloud-burst-800 max-w-3xl;
+  @apply h-2/5 flex flex-col justify-around gap-4 items-center rounded-xl border border-royal-blue-500 p-4 bg-cloud-burst-800 max-w-3xl;
 }
 
 .dialogue-text {

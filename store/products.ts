@@ -34,4 +34,14 @@ export default class Products extends VuexModule {
       console.log(err.response)
     }
   }
+
+  @Action({ rawError: true })
+  public async get(data: string) {
+    try {
+      const infos = await $axios.$get(`/product/${data}`)
+      return infos
+    } catch (err: any) {
+      console.log(err.response)
+    }
+  }
 }
