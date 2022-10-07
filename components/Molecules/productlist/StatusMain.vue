@@ -11,7 +11,6 @@
         <StatusItem :product="item" />
       </div>
     </client-only>
-    <button @click="products.set()">Teste</button>
   </div>
 </template>
 
@@ -20,7 +19,6 @@ import Vue from 'vue'
 import { dialogue, products } from '@/store'
 export default Vue.extend({
   name: 'StatusMain',
-  middleware: 'products_list',
   computed: {
     dialogueBox() {
       return dialogue

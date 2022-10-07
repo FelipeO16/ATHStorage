@@ -1,4 +1,10 @@
-import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
+import {
+  Module,
+  VuexModule,
+  Mutation,
+  Action,
+  MutationAction,
+} from 'vuex-module-decorators'
 import { $axios } from '@/utils/nuxt-instance'
 
 @Module({ namespaced: true, stateFactory: true, name: 'products' })
@@ -19,10 +25,13 @@ export default class Products extends VuexModule {
     this.products_list = list
   }
 
-  @Action
+  @Action({ rawError: true })
   public async set() {
-    const list = await $axios.$get('/products')
+    const list = await $axios.$get(
+      'https://ath.gs-rp.net/api/products?data=' + new Date().getTime()
+    )
     this.context.commit('setProductsList', list)
+    console.log(list)
   }
 
   @Action({ rawError: true })
@@ -43,5 +52,20 @@ export default class Products extends VuexModule {
     } catch (err: any) {
       console.log(err.response)
     }
+  }
+
+  @Action({ rawError: true })
+  public async update(data: any) {
+    try {
+      const status = await $axios.$put(`/product`, data)
+      return status
+    } catch (err: any) {
+      console.log(err.response)
+    }
+  }
+
+  public async test(list: any) {
+    this.context.commit('setProductsList', list)
+    console.log(list)
   }
 }

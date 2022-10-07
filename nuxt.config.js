@@ -1,3 +1,4 @@
+
 export default {
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
@@ -47,13 +48,13 @@ export default {
         '@nuxtjs/axios',
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
-
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {
         // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-        baseURL: process.env.NODE_ENV === 'production' ? 'http://192.168.0.2:3333' : 'http://192.168.0.2:3333',
+        baseURL: process.env.NODE_ENV === 'production' ? 'https://ath.gs-rp.net/api/' : 'https://ath.gs-rp.net/api/',
+        browserBaseURL: process.env.NODE_ENV === 'production' ? 'https://ath.gs-rp.net/api/' : 'https://ath.gs-rp.net/api/'
     },
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -78,7 +79,9 @@ export default {
             },
         },
     },
+
     server: {
-        host: '0.0.0.0' // default: localhost
+        host: '0.0.0.0', // default: localhost
+        port: '21084'
     }
 }

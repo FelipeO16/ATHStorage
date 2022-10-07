@@ -7,11 +7,13 @@
       </div>
       <div class="quantity">
         <label for="product-quantity">Qtt:</label>
-        <input type="number" placeholder="quantity" />
+        <input type="number" placeholder="quantity" v-model="new_value" />
       </div>
-      <button @click="set('meuovo')">Set</button>
+      <button @click="set()">Set</button>
     </div>
-    <qrcode-stream class="qr-capture" @decode="onDecode"></qrcode-stream>
+    <div class="test">
+      <qrcode-stream class="qr-capture" @decode="onDecode"></qrcode-stream>
+    </div>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ export default Vue.extend({
   data() {
     return {
       product: {} as any,
+      new_value: 0,
     }
   },
   computed: {
@@ -40,12 +43,9 @@ export default Vue.extend({
     async onDecode(decodedString: string) {
       let result = await products.get(decodedString)
       this.product = result[0]
-      alert(this.product)
     },
-    async set(p: string) {
-      let result = await products.get(p)
-      this.product = result[0]
-      alert(JSON.stringify(this.product.description))
+    async set() {
+      products.update(this.product)
     },
   },
 })
@@ -65,10 +65,10 @@ export default Vue.extend({
 }
 
 input {
-  @apply w-full;
+  @apply w-full text-royal-blue-500;
 }
 
-.qr-capture {
-  @apply w-72 h-72;
+.test {
+  @apply w-5/6 h-3/6;
 }
 </style>

@@ -14,7 +14,7 @@ import Vue from 'vue'
 import {
   faListUl,
   faCalculator,
-  faEnvelopeCircleCheck,
+  faCartPlus,
   faTriangleExclamation,
   faPlus,
 } from '@fortawesome/free-solid-svg-icons'
@@ -22,13 +22,7 @@ import {
 export default Vue.extend({
   computed: {
     icons() {
-      return [
-        faListUl,
-        faPlus,
-        faCalculator,
-        faEnvelopeCircleCheck,
-        faTriangleExclamation,
-      ]
+      return [faListUl, faPlus, faCalculator, faCartPlus, faTriangleExclamation]
     },
   },
 })

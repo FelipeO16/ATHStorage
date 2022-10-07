@@ -1,10 +1,12 @@
 <template>
   <div class="page" :class="{ dark: darkmode }">
+    <!-- <Notify /> -->
     <!-- <ToggleDarkmode /> -->
     <Sidebar />
     <ProductList />
     <AddProduct />
     <ProductCountMain />
+    <Cart />
   </div>
 </template>
 

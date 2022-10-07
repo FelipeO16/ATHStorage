@@ -1,7 +1,14 @@
 <template>
   <div class="dialogue">
-    <div class="dialogue-box">
+    <div
+      class="dialogue-box"
+      :class="{ 'h-2/5': !showQrCode, 'h-3/5': showQrCode }"
+    >
+      <button class="show-qrcode" @click="showQrCode = !showQrCode">
+        {{ showQrCode ? 'Hidden QrCode' : 'Show QrCode' }}
+      </button>
       <img
+        v-show="showQrCode"
         class="qr"
         :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${item.code}`"
       />
@@ -13,7 +20,18 @@
       </div>
       <div class="dialogue-quantity">
         <label for="quantity">Quantity</label>
-        <input id="quantity" type="number" name="quantity" />
+        <button @click="sub()" class="quantity-button">
+          <font-awesome-icon :icon="faMinus"></font-awesome-icon>
+        </button>
+        <input
+          id="quantity"
+          type="number"
+          name="quantity"
+          v-model.number="item_quantity"
+        />
+        <button @click="sum()" class="quantity-button">
+          <font-awesome-icon :icon="faPlus"></font-awesome-icon>
+        </button>
       </div>
       <div class="dialogue-confirm">
         <button @click="addToCart(item)">
@@ -24,41 +42,34 @@
         </button>
       </div>
     </div>
-
-    <!-- <div class="teste">
-      description: {{ item.description }}
-      <br />
-      class: {{ item.class }}
-      <br />
-      price: {{ item.price }}
-      <br />
-      total: {{ item.total }}
-      <br />
-      min: {{ item.min }}
-      <br />
-      max: {{ item.max }}
-      <br />
-      place: {{ item.place }}
-      <br />
-      status: {{ item.status }}
-      <br />
-    </div> -->
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { dialogue } from '@/store'
+import { dialogue, cart } from '@/store'
+import { Item, CartItem } from '@/models'
 import {
   faCancel,
   faCircleCheck,
   faCircleXmark,
+  faPlus,
+  faMinus,
 } from '@fortawesome/free-solid-svg-icons'
 
 export default Vue.extend({
+  data() {
+    return {
+      item_quantity: 1,
+      showQrCode: true,
+    }
+  },
   computed: {
     item() {
       return dialogue.$dialogue_item
+    },
+    cart() {
+      return cart
     },
     dialogueBox() {
       return dialogue
@@ -72,20 +83,53 @@ export default Vue.extend({
     faCircleXmark() {
       return faCircleXmark
     },
+    faPlus() {
+      return faPlus
+    },
+    faMinus() {
+      return faMinus
+    },
   },
   methods: {
     closeDialogue(status: boolean) {
       this.dialogueBox.toggleDialogue(status)
     },
-    addToCart(item: object) {
+    addToCart(item: Item) {
       // this.dialogueBox.$dialogue_box = false
-      // this.dialogueBox.$cart_list.push(item)
+      let data = {
+        id: item.id,
+        code: item.code,
+        suplier: item.suplier,
+        description: item.description,
+        quantity: this.item_quantity,
+      } as CartItem
+      this.cart.increment(data)
     },
+    sum() {
+      this.item_quantity += 1
+      ;(this.$refs.quantity as HTMLInputElement)?.focus()
+    },
+    sub() {
+      this.item_quantity += 1
+      ;(this.$refs.quantity as HTMLInputElement)?.focus()
+    },
+    count() {},
   },
 })
 </script>
 
 <style scoped>
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
 /* Dialogue */
 
 .dialogue {
@@ -95,7 +139,11 @@ export default Vue.extend({
 /* Dialogue box */
 
 .dialogue-box {
-  @apply h-2/5 flex flex-col justify-around gap-4 items-center rounded-xl border border-royal-blue-500 p-4 bg-cloud-burst-800 max-w-3xl;
+  @apply flex flex-col justify-around gap-4 items-center rounded-xl border border-royal-blue-500 p-4 bg-cloud-burst-800 max-w-3xl;
+}
+
+.show-qrcode {
+  @apply text-blue-500;
 }
 
 .dialogue-text {
@@ -117,11 +165,15 @@ export default Vue.extend({
 }
 
 .dialogue-quantity input {
-  @apply text-white bg-transparent;
+  @apply text-white bg-transparent text-center;
 }
 
 .dialogue-quantity input:focus {
   @apply text-white bg-transparent outline-none;
+}
+
+.quantity-button {
+  @apply hover:text-blue-500;
 }
 
 /* Dialogue confirm */

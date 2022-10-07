@@ -1,0 +1,1 @@
+require("child_process").fork(`${__dirname}/node_modules/nuxt/bin/nuxt.js`, ["start"]);
