@@ -4495,15 +4495,15 @@ __webpack_require__.r(__webpack_exports__);
 var components_namespaceObject = {};
 __webpack_require__.r(components_namespaceObject);
 __webpack_require__.d(components_namespaceObject, "Tutorial", function() { return Tutorial; });
-__webpack_require__.d(components_namespaceObject, "AddProduct", function() { return AddProduct; });
-__webpack_require__.d(components_namespaceObject, "Cart", function() { return Cart; });
-__webpack_require__.d(components_namespaceObject, "ProductList", function() { return ProductList; });
-__webpack_require__.d(components_namespaceObject, "Sidebar", function() { return Sidebar; });
-__webpack_require__.d(components_namespaceObject, "ShowQr", function() { return ShowQr; });
 __webpack_require__.d(components_namespaceObject, "Logo", function() { return Logo; });
 __webpack_require__.d(components_namespaceObject, "Notify", function() { return Notify; });
 __webpack_require__.d(components_namespaceObject, "SidebarIcon", function() { return SidebarIcon; });
 __webpack_require__.d(components_namespaceObject, "ToggleDarkmode", function() { return ToggleDarkmode; });
+__webpack_require__.d(components_namespaceObject, "AddProduct", function() { return AddProduct; });
+__webpack_require__.d(components_namespaceObject, "Cart", function() { return Cart; });
+__webpack_require__.d(components_namespaceObject, "Sidebar", function() { return Sidebar; });
+__webpack_require__.d(components_namespaceObject, "ProductList", function() { return ProductList; });
+__webpack_require__.d(components_namespaceObject, "ShowQr", function() { return ShowQr; });
 __webpack_require__.d(components_namespaceObject, "AddProductForm", function() { return AddProductForm; });
 __webpack_require__.d(components_namespaceObject, "QrCode", function() { return QrCode; });
 __webpack_require__.d(components_namespaceObject, "CartCategories", function() { return CartCategories; });
@@ -4724,7 +4724,7 @@ async function setContext(app, context) {
   // If context not defined, create it
   if (!app.context) {
     app.context = {
-      isStatic: false,
+      isStatic: true,
       isDev: false,
       isHMR: false,
       app,
@@ -5946,6 +5946,10 @@ const layouts = {
 
     isFetching() {
       return this.nbFetching > 0;
+    },
+
+    isPreview() {
+      return Boolean(this.$options.previewData);
     }
 
   },
@@ -6177,15 +6181,15 @@ function mergeProperty(storeModule, moduleData, property) {
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
 const Tutorial = () => __webpack_require__.e(/* import() | components/tutorial */ 25).then(__webpack_require__.bind(null, 156)).then(c => wrapFunctional(c.default || c));
-const AddProduct = () => __webpack_require__.e(/* import() | components/add-product */ 1).then(__webpack_require__.bind(null, 147)).then(c => wrapFunctional(c.default || c));
-const Cart = () => __webpack_require__.e(/* import() | components/cart */ 3).then(__webpack_require__.bind(null, 149)).then(c => wrapFunctional(c.default || c));
-const ProductList = () => __webpack_require__.e(/* import() | components/product-list */ 12).then(__webpack_require__.bind(null, 146)).then(c => wrapFunctional(c.default || c));
-const Sidebar = () => __webpack_require__.e(/* import() | components/sidebar */ 15).then(__webpack_require__.bind(null, 145)).then(c => wrapFunctional(c.default || c));
-const ShowQr = () => __webpack_require__.e(/* import() | components/show-qr */ 14).then(__webpack_require__.bind(null, 150)).then(c => wrapFunctional(c.default || c));
 const Logo = () => __webpack_require__.e(/* import() | components/logo */ 9).then(__webpack_require__.bind(null, 125)).then(c => wrapFunctional(c.default || c));
 const Notify = () => __webpack_require__.e(/* import() | components/notify */ 10).then(__webpack_require__.bind(null, 157)).then(c => wrapFunctional(c.default || c));
 const SidebarIcon = () => __webpack_require__.e(/* import() | components/sidebar-icon */ 16).then(__webpack_require__.bind(null, 100)).then(c => wrapFunctional(c.default || c));
 const ToggleDarkmode = () => __webpack_require__.e(/* import() | components/toggle-darkmode */ 24).then(__webpack_require__.bind(null, 127)).then(c => wrapFunctional(c.default || c));
+const AddProduct = () => __webpack_require__.e(/* import() | components/add-product */ 1).then(__webpack_require__.bind(null, 147)).then(c => wrapFunctional(c.default || c));
+const Cart = () => __webpack_require__.e(/* import() | components/cart */ 3).then(__webpack_require__.bind(null, 149)).then(c => wrapFunctional(c.default || c));
+const Sidebar = () => __webpack_require__.e(/* import() | components/sidebar */ 15).then(__webpack_require__.bind(null, 145)).then(c => wrapFunctional(c.default || c));
+const ProductList = () => __webpack_require__.e(/* import() | components/product-list */ 12).then(__webpack_require__.bind(null, 146)).then(c => wrapFunctional(c.default || c));
+const ShowQr = () => __webpack_require__.e(/* import() | components/show-qr */ 14).then(__webpack_require__.bind(null, 150)).then(c => wrapFunctional(c.default || c));
 const AddProductForm = () => __webpack_require__.e(/* import() | components/add-product-form */ 2).then(__webpack_require__.bind(null, 129)).then(c => wrapFunctional(c.default || c));
 const QrCode = () => __webpack_require__.e(/* import() | components/qr-code */ 13).then(__webpack_require__.bind(null, 104)).then(c => wrapFunctional(c.default || c));
 const CartCategories = () => __webpack_require__.e(/* import() | components/cart-categories */ 4).then(__webpack_require__.bind(null, 88)).then(c => wrapFunctional(c.default || c));
@@ -6482,7 +6486,7 @@ const setupProgress = axios => {
   // runtimeConfig
   const runtimeConfig = ctx.$config && ctx.$config.axios || {}; // baseURL
 
-  const baseURL =  false ? undefined : runtimeConfig.baseURL || runtimeConfig.baseUrl || process.env._AXIOS_BASE_URL_ || 'http://ath-storage.kinghost.net:21071/api'; // Create fresh objects for all default header scopes
+  const baseURL =  false ? undefined : runtimeConfig.baseURL || runtimeConfig.baseUrl || process.env._AXIOS_BASE_URL_ || 'https://athstocktake.com//api'; // Create fresh objects for all default header scopes
   // Axios creates only one which is shared across SSR requests!
   // https://github.com/mzabriskie/axios/blob/master/lib/defaults.js
 
@@ -6670,14 +6674,61 @@ async function createApp(ssrContext, config = {}) {
       }, {
         "name": "format-detection",
         "content": "telephone=no"
+      }, {
+        "hid": "charset",
+        "charset": "utf-8"
+      }, {
+        "hid": "mobile-web-app-capable",
+        "name": "mobile-web-app-capable",
+        "content": "yes"
+      }, {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "ATHStorage"
+      }, {
+        "hid": "og:type",
+        "name": "og:type",
+        "property": "og:type",
+        "content": "website"
+      }, {
+        "hid": "og:title",
+        "name": "og:title",
+        "property": "og:title",
+        "content": "ATHStorage"
+      }, {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "property": "og:site_name",
+        "content": "ATHStorage"
+      }, {
+        "hid": "og:description",
+        "name": "og:description",
+        "property": "og:description",
+        "content": "## Build Setup"
       }],
       "link": [{
         "rel": "icon",
         "type": "image\u002Fx-icon",
         "href": "\u002Ffavicon.ico"
+      }, {
+        "hid": "shortcut-icon",
+        "rel": "shortcut icon",
+        "href": "\u002F_nuxt\u002Ficons\u002Ficon_64x64.e3e9fb.png"
+      }, {
+        "hid": "apple-touch-icon",
+        "rel": "apple-touch-icon",
+        "href": "\u002F_nuxt\u002Ficons\u002Ficon_512x512.e3e9fb.png",
+        "sizes": "512x512"
+      }, {
+        "rel": "manifest",
+        "href": "\u002F_nuxt\u002Fmanifest.cdc363fb.json",
+        "hid": "manifest"
       }],
       "style": [],
-      "script": []
+      "script": [],
+      "htmlAttrs": {
+        "lang": "en"
+      }
     },
     store,
     router,
