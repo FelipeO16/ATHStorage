@@ -4,9 +4,15 @@
       <CartListHeader :suplier="title" />
     </div>
     <Transition name="slide-fade">
-      <CartCategories v-show="show" />
-      <div class="list" v-show="show">
-        <CartItem v-for="(item, index) in list" :key="index" :item="item" />
+      <div v-show="show">
+        <CartCategories />
+        <div class="list">
+          <CartItem v-for="(item, index) in list" :key="index" :item="item" />
+        </div>
+        <div class="buy">
+          <button class="bg-green-500" >Buy</button>
+          <button class="bg-red-500" @click="cart.remove(title)">Remove</button>
+        </div>
       </div>
     </Transition>
   </div>
@@ -14,7 +20,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
+import { cart } from '@/store'
 export default Vue.extend({
   props: {
     list: Array,
@@ -24,6 +30,11 @@ export default Vue.extend({
     return {
       show: false,
     }
+  },
+  computed: {
+    cart() {
+      return cart
+    },
   },
 })
 </script>
@@ -60,5 +71,13 @@ export default Vue.extend({
 }
 .list {
   @apply w-full;
+}
+
+.buy {
+  @apply w-full flex h-8 rounded-b-xl justify-center items-center;
+}
+
+.buy button {
+  @apply w-20 h-full text-white;
 }
 </style>

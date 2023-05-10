@@ -2,14 +2,16 @@
   <div class="staus-main">
     <client-only>
       <StatusCategories />
-      <div
-        class="item"
-        v-for="(item, index) in products.$productsList"
-        :key="index"
-        @click="setDialogue(item)"
-      >
-        <StatusItem :product="item" />
-      </div>
+      <transition-group name="flip-list" tag="ul" class="list-item">
+        <li
+          class="item"
+          v-for="item in products.$productsList"
+          v-bind:key="item.id"
+          @click="setDialogue(item)"
+        >
+          <StatusItem :product="item" />
+        </li>
+      </transition-group>
     </client-only>
   </div>
 </template>
@@ -80,6 +82,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.flip-list-move {
+  transition: transform 0.8s;
+}
 /* width */
 ::-webkit-scrollbar {
   @apply w-3 border border-royal-blue-500 rounded-xl;
@@ -100,11 +105,15 @@ export default Vue.extend({
   background: #555;
 } */
 
+.list-item {
+  @apply flex flex-col gap-4 p-2;
+}
+
 .staus-main {
   @apply w-full h-full flex flex-col gap-4 p-2 relative overflow-y-auto overflow-x-hidden;
 }
 
 .item {
-  @apply w-full h-10 border border-royal-blue-500 relative rounded-md;
+  @apply w-full border border-royal-blue-500 relative rounded-md;
 }
 </style>

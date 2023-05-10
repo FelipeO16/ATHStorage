@@ -21,7 +21,7 @@ export default Vue.extend({
 
 <style scoped>
 .status-item {
-  @apply w-full h-full flex items-center text-royal-blue-200 shadow-lg select-none relative rounded-md;
+  @apply w-full h-full flex items-center text-royal-blue-200 shadow-lg select-none relative rounded-md text-sm;
 }
 
 .status-item:hover {

@@ -1,4 +1,3 @@
-
 export default {
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
@@ -48,13 +47,14 @@ export default {
         '@nuxtjs/axios',
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
+        '@nuxtjs/toast'
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {
         // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-        baseURL: process.env.NODE_ENV === 'production' ? 'https://ath.gs-rp.net/api/' : 'https://ath.gs-rp.net/api/',
-        browserBaseURL: process.env.NODE_ENV === 'production' ? 'https://ath.gs-rp.net/api/' : 'https://ath.gs-rp.net/api/'
+        baseURL: process.env.NODE_ENV === 'production' ? 'http://ath-storage.kinghost.net:21071/api' : 'http://ath-storage.kinghost.net:21071/api',
+        browserBaseURL: process.env.NODE_ENV === 'production' ? 'http://ath-storage.kinghost.net:21071/api' : 'http://ath-storage.kinghost.net:21071/api'
     },
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -62,6 +62,21 @@ export default {
         manifest: {
             lang: 'en',
         },
+    },
+
+    // toast module configuration: https://www.npmjs.com/package/vue-toast-notification
+    // toast module instalation: https://www.npmjs.com/package/@nuxtjs/toast
+    toast: {
+        position: 'top-center',
+        register: [ // Register custom toasts
+            {
+                name: 'my-error',
+                message: 'Oops...Something went wrong',
+                options: {
+                    type: 'error'
+                }
+            }
+        ]
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -81,7 +96,7 @@ export default {
     },
 
     server: {
-        host: '0.0.0.0', // default: localhost
-        port: '21084'
+        host: 'localhost', // default: localhost
+        port: '21075'
     }
 }

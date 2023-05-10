@@ -36,6 +36,13 @@ export default class Cart extends VuexModule {
     console.log(this.cart_list)
   }
 
+  @Mutation
+  private removeCartList(index: string): void {
+    delete this.cart_list[index]
+    this.cart_list = { ...this.cart_list }
+  }
+
+
   @Action({ rawError: true })
   public async set() {
     const list = await $axios.$get('/products/')
@@ -65,5 +72,14 @@ export default class Cart extends VuexModule {
   @Action({ rawError: true })
   public async increment(item: CartItem) {
     this.context.commit('setCartList', item)
+    return true
   }
+
+  //action to remove list by index as string from cart
+  @Action({ rawError: true })
+  public async remove(index: string) {
+    this.context.commit('removeCartList', index)
+    return true
+  }
+
 }

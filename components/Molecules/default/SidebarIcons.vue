@@ -5,24 +5,30 @@
       v-for="(icon, index) in icons"
       :key="index"
       :index="index"
+      :actived="index == page"
     />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { pages } from '@/store'
 import {
   faListUl,
   faCalculator,
   faCartPlus,
   faTriangleExclamation,
   faPlus,
+  faQrcode,
 } from '@fortawesome/free-solid-svg-icons'
 
 export default Vue.extend({
   computed: {
     icons() {
-      return [faListUl, faPlus, faCalculator, faCartPlus, faTriangleExclamation]
+      return [faListUl, faPlus, faCalculator, faCartPlus, faTriangleExclamation, faQrcode]
+    },
+    page() {
+      return pages.$page
     },
   },
 })

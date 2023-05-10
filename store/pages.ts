@@ -18,7 +18,7 @@ export default class Pages extends VuexModule {
   @Action
   public async set(page: number) {
     console.log(page)
-    if (page == 0) {
+    if (page == 0 || page == 5) {
       await products.set()
     }
     this.context.commit('setPage', page)

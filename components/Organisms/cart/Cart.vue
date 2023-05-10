@@ -13,6 +13,7 @@ export default Vue.extend({
       return pages.$page
     },
   },
+
 })
 </script>
 

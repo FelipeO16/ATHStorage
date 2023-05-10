@@ -16,12 +16,15 @@ export default Vue.extend({
       required: true,
     },
   },
+  mounted() {
+    console.log(this.item)
+  },
 })
 </script>
 
 <style scoped>
 .cart-item {
-  @apply w-full h-10 flex text-royal-blue-200 shadow-lg select-none relative rounded-md;
+  @apply w-full flex text-royal-blue-200 shadow-lg select-none relative rounded-md;
 }
 
 .cart-item:hover {

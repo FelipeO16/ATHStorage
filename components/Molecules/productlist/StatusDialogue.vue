@@ -10,7 +10,7 @@
       <img
         v-show="showQrCode"
         class="qr"
-        :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${item.code}`"
+        :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${item.code}&bgcolor=161932`"
       />
       <div class="dialogue-text" v-if="item.status == 'Bad'">
         Add <span>{{ item.description }} </span>to cart?
@@ -49,6 +49,7 @@
 import Vue from 'vue'
 import { dialogue, cart } from '@/store'
 import { Item, CartItem } from '@/models'
+import autoAnimate from '@formkit/auto-animate'
 import {
   faCancel,
   faCircleCheck,
@@ -104,13 +105,17 @@ export default Vue.extend({
         quantity: this.item_quantity,
       } as CartItem
       this.cart.increment(data)
+      this.$toast.success(item.description + 'Added to cart!', {
+        duration: 3000,
+      })
+      this.closeDialogue(false)
     },
     sum() {
       this.item_quantity += 1
       ;(this.$refs.quantity as HTMLInputElement)?.focus()
     },
     sub() {
-      this.item_quantity += 1
+      this.item_quantity -= 1
       ;(this.$refs.quantity as HTMLInputElement)?.focus()
     },
     count() {},

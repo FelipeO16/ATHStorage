@@ -1,11 +1,20 @@
 <template>
   <div class="status-categories">
-    <span v-for="category in categories" :key="category">{{ category }}</span>
+    <span
+      v-for="(category, index) in categories"
+      :key="index"
+      @click="order(category), select(index)"
+    >
+      {{ category }}
+      <font-awesome-icon :icon="markdown" v-if="selected[index]" />
+    </span>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { products } from '@/store'
+import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons'
 
 export default Vue.extend({
   data() {
@@ -16,13 +25,33 @@ export default Vue.extend({
         'description',
         'class',
         'price',
-        'total',
+        'storage',
         'min',
         'max',
         'place',
         'status',
       ],
+      selected: [] as any,
     }
+  },
+  computed: {
+    markdown() {
+      return faArrowAltCircleDown
+    },
+  },
+  methods: {
+    async order(category: string) {
+      await products.order(category)
+    },
+    select(index: number) {
+      if (this.selected[index]) {
+        this.order('id')
+        this.selected = []
+      } else {
+        this.selected = []
+        this.selected[index] = true
+      }
+    },
   },
 })
 </script>
@@ -33,7 +62,7 @@ export default Vue.extend({
 }
 
 .status-categories span {
-  @apply flex justify-center p-2;
+  @apply flex justify-center p-2 gap-1 cursor-default items-end;
 }
 .status-categories span:nth-child(1) {
   @apply w-1/12;

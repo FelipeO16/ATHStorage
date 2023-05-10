@@ -25,6 +25,10 @@ export default Vue.extend({
   methods: {
     toggleDarkmode() {
       darkmode.toggle()
+      // this.$toast.success('Teste Sucesso...', { duration: 3000 })
+      // this.$toast.error('Teste Erro...', { duration: 3000 })
+      // this.$toast.info('Teste Informação...', { duration: 3000 })
+      // this.$toast.show('Teste Padrão...', { duration: 3000 })
     },
   },
 })
