@@ -2,17 +2,20 @@
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   },
-  "Logo": {
-    "description": "Auto imported from components/Atoms/default/Logo.vue"
+  "AddProduct": {
+    "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
   },
-  "Notify": {
-    "description": "Auto imported from components/Atoms/default/Notify.vue"
+  "Cart": {
+    "description": "Auto imported from components/Organisms/cart/Cart.vue"
   },
-  "SidebarIcon": {
-    "description": "Auto imported from components/Atoms/default/SidebarIcon.vue"
+  "Sidebar": {
+    "description": "Auto imported from components/Organisms/default/Sidebar.vue"
   },
-  "ToggleDarkmode": {
-    "description": "Auto imported from components/Atoms/default/ToggleDarkmode.vue"
+  "ProductList": {
+    "description": "Auto imported from components/Organisms/productlist/ProductList.vue"
+  },
+  "ShowQr": {
+    "description": "Auto imported from components/Organisms/showqr/ShowQr.vue"
   },
   "AddProductForm": {
     "description": "Auto imported from components/Molecules/addproduct/AddProductForm.vue"
@@ -59,19 +62,16 @@
   "StatusProductList": {
     "description": "Auto imported from components/Molecules/productlist/StatusProductList.vue"
   },
-  "AddProduct": {
-    "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
+  "Logo": {
+    "description": "Auto imported from components/Atoms/default/Logo.vue"
   },
-  "Cart": {
-    "description": "Auto imported from components/Organisms/cart/Cart.vue"
+  "Notify": {
+    "description": "Auto imported from components/Atoms/default/Notify.vue"
   },
-  "Sidebar": {
-    "description": "Auto imported from components/Organisms/default/Sidebar.vue"
+  "SidebarIcon": {
+    "description": "Auto imported from components/Atoms/default/SidebarIcon.vue"
   },
-  "ProductList": {
-    "description": "Auto imported from components/Organisms/productlist/ProductList.vue"
-  },
-  "ShowQr": {
-    "description": "Auto imported from components/Organisms/showqr/ShowQr.vue"
+  "ToggleDarkmode": {
+    "description": "Auto imported from components/Atoms/default/ToggleDarkmode.vue"
   }
 }
