@@ -1,0 +1,77 @@
+{
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Atoms/default/Logo.vue"
+  },
+  "Notify": {
+    "description": "Auto imported from components/Atoms/default/Notify.vue"
+  },
+  "SidebarIcon": {
+    "description": "Auto imported from components/Atoms/default/SidebarIcon.vue"
+  },
+  "ToggleDarkmode": {
+    "description": "Auto imported from components/Atoms/default/ToggleDarkmode.vue"
+  },
+  "AddProductForm": {
+    "description": "Auto imported from components/Molecules/addproduct/AddProductForm.vue"
+  },
+  "QrCode": {
+    "description": "Auto imported from components/Molecules/addproduct/QrCode.vue"
+  },
+  "CartCategories": {
+    "description": "Auto imported from components/Molecules/cartlist/CartCategories.vue"
+  },
+  "CartItem": {
+    "description": "Auto imported from components/Molecules/cartlist/CartItem.vue"
+  },
+  "CartList": {
+    "description": "Auto imported from components/Molecules/cartlist/CartList.vue"
+  },
+  "CartListHeader": {
+    "description": "Auto imported from components/Molecules/cartlist/CartListHeader.vue"
+  },
+  "Carts": {
+    "description": "Auto imported from components/Molecules/cartlist/Carts.vue"
+  },
+  "SidebarIcons": {
+    "description": "Auto imported from components/Molecules/default/SidebarIcons.vue"
+  },
+  "ProductCountMain": {
+    "description": "Auto imported from components/Molecules/productcount/ProductCountMain.vue"
+  },
+  "StatusCategories": {
+    "description": "Auto imported from components/Molecules/productlist/StatusCategories.vue"
+  },
+  "StatusDialogue": {
+    "description": "Auto imported from components/Molecules/productlist/StatusDialogue.vue"
+  },
+  "StatusHeader": {
+    "description": "Auto imported from components/Molecules/productlist/StatusHeader.vue"
+  },
+  "StatusItem": {
+    "description": "Auto imported from components/Molecules/productlist/StatusItem.vue"
+  },
+  "StatusMain": {
+    "description": "Auto imported from components/Molecules/productlist/StatusMain.vue"
+  },
+  "StatusProductList": {
+    "description": "Auto imported from components/Molecules/productlist/StatusProductList.vue"
+  },
+  "AddProduct": {
+    "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
+  },
+  "Cart": {
+    "description": "Auto imported from components/Organisms/cart/Cart.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from components/Organisms/default/Sidebar.vue"
+  },
+  "ProductList": {
+    "description": "Auto imported from components/Organisms/productlist/ProductList.vue"
+  },
+  "ShowQr": {
+    "description": "Auto imported from components/Organisms/showqr/ShowQr.vue"
+  }
+}
