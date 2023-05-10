@@ -1,28 +1,28 @@
-export { default as Tutorial } from '../..\\components\\Tutorial.vue'
-export { default as Logo } from '../..\\components\\Atoms\\default\\Logo.vue'
-export { default as Notify } from '../..\\components\\Atoms\\default\\Notify.vue'
-export { default as SidebarIcon } from '../..\\components\\Atoms\\default\\SidebarIcon.vue'
-export { default as ToggleDarkmode } from '../..\\components\\Atoms\\default\\ToggleDarkmode.vue'
-export { default as AddProductForm } from '../..\\components\\Molecules\\addproduct\\AddProductForm.vue'
-export { default as QrCode } from '../..\\components\\Molecules\\addproduct\\QrCode.vue'
-export { default as CartCategories } from '../..\\components\\Molecules\\cartlist\\CartCategories.vue'
-export { default as CartItem } from '../..\\components\\Molecules\\cartlist\\CartItem.vue'
-export { default as CartList } from '../..\\components\\Molecules\\cartlist\\CartList.vue'
-export { default as CartListHeader } from '../..\\components\\Molecules\\cartlist\\CartListHeader.vue'
-export { default as Carts } from '../..\\components\\Molecules\\cartlist\\Carts.vue'
-export { default as SidebarIcons } from '../..\\components\\Molecules\\default\\SidebarIcons.vue'
-export { default as ProductCountMain } from '../..\\components\\Molecules\\productcount\\ProductCountMain.vue'
-export { default as StatusCategories } from '../..\\components\\Molecules\\productlist\\StatusCategories.vue'
-export { default as StatusDialogue } from '../..\\components\\Molecules\\productlist\\StatusDialogue.vue'
-export { default as StatusHeader } from '../..\\components\\Molecules\\productlist\\StatusHeader.vue'
-export { default as StatusItem } from '../..\\components\\Molecules\\productlist\\StatusItem.vue'
-export { default as StatusMain } from '../..\\components\\Molecules\\productlist\\StatusMain.vue'
-export { default as StatusProductList } from '../..\\components\\Molecules\\productlist\\StatusProductList.vue'
-export { default as AddProduct } from '../..\\components\\Organisms\\addproduct\\AddProduct.vue'
-export { default as Cart } from '../..\\components\\Organisms\\cart\\Cart.vue'
-export { default as Sidebar } from '../..\\components\\Organisms\\default\\Sidebar.vue'
-export { default as ProductList } from '../..\\components\\Organisms\\productlist\\ProductList.vue'
-export { default as ShowQr } from '../..\\components\\Organisms\\showqr\\ShowQr.vue'
+export const Tutorial = () => import('../..\\components\\Tutorial.vue' /* webpackChunkName: "components/tutorial" */).then(c => wrapFunctional(c.default || c))
+export const AddProduct = () => import('../..\\components\\Organisms\\addproduct\\AddProduct.vue' /* webpackChunkName: "components/add-product" */).then(c => wrapFunctional(c.default || c))
+export const Cart = () => import('../..\\components\\Organisms\\cart\\Cart.vue' /* webpackChunkName: "components/cart" */).then(c => wrapFunctional(c.default || c))
+export const ProductList = () => import('../..\\components\\Organisms\\productlist\\ProductList.vue' /* webpackChunkName: "components/product-list" */).then(c => wrapFunctional(c.default || c))
+export const Sidebar = () => import('../..\\components\\Organisms\\default\\Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
+export const ShowQr = () => import('../..\\components\\Organisms\\showqr\\ShowQr.vue' /* webpackChunkName: "components/show-qr" */).then(c => wrapFunctional(c.default || c))
+export const Logo = () => import('../..\\components\\Atoms\\default\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c))
+export const Notify = () => import('../..\\components\\Atoms\\default\\Notify.vue' /* webpackChunkName: "components/notify" */).then(c => wrapFunctional(c.default || c))
+export const SidebarIcon = () => import('../..\\components\\Atoms\\default\\SidebarIcon.vue' /* webpackChunkName: "components/sidebar-icon" */).then(c => wrapFunctional(c.default || c))
+export const ToggleDarkmode = () => import('../..\\components\\Atoms\\default\\ToggleDarkmode.vue' /* webpackChunkName: "components/toggle-darkmode" */).then(c => wrapFunctional(c.default || c))
+export const AddProductForm = () => import('../..\\components\\Molecules\\addproduct\\AddProductForm.vue' /* webpackChunkName: "components/add-product-form" */).then(c => wrapFunctional(c.default || c))
+export const QrCode = () => import('../..\\components\\Molecules\\addproduct\\QrCode.vue' /* webpackChunkName: "components/qr-code" */).then(c => wrapFunctional(c.default || c))
+export const CartCategories = () => import('../..\\components\\Molecules\\cartlist\\CartCategories.vue' /* webpackChunkName: "components/cart-categories" */).then(c => wrapFunctional(c.default || c))
+export const CartItem = () => import('../..\\components\\Molecules\\cartlist\\CartItem.vue' /* webpackChunkName: "components/cart-item" */).then(c => wrapFunctional(c.default || c))
+export const CartList = () => import('../..\\components\\Molecules\\cartlist\\CartList.vue' /* webpackChunkName: "components/cart-list" */).then(c => wrapFunctional(c.default || c))
+export const CartListHeader = () => import('../..\\components\\Molecules\\cartlist\\CartListHeader.vue' /* webpackChunkName: "components/cart-list-header" */).then(c => wrapFunctional(c.default || c))
+export const Carts = () => import('../..\\components\\Molecules\\cartlist\\Carts.vue' /* webpackChunkName: "components/carts" */).then(c => wrapFunctional(c.default || c))
+export const SidebarIcons = () => import('../..\\components\\Molecules\\default\\SidebarIcons.vue' /* webpackChunkName: "components/sidebar-icons" */).then(c => wrapFunctional(c.default || c))
+export const ProductCountMain = () => import('../..\\components\\Molecules\\productcount\\ProductCountMain.vue' /* webpackChunkName: "components/product-count-main" */).then(c => wrapFunctional(c.default || c))
+export const StatusCategories = () => import('../..\\components\\Molecules\\productlist\\StatusCategories.vue' /* webpackChunkName: "components/status-categories" */).then(c => wrapFunctional(c.default || c))
+export const StatusDialogue = () => import('../..\\components\\Molecules\\productlist\\StatusDialogue.vue' /* webpackChunkName: "components/status-dialogue" */).then(c => wrapFunctional(c.default || c))
+export const StatusHeader = () => import('../..\\components\\Molecules\\productlist\\StatusHeader.vue' /* webpackChunkName: "components/status-header" */).then(c => wrapFunctional(c.default || c))
+export const StatusItem = () => import('../..\\components\\Molecules\\productlist\\StatusItem.vue' /* webpackChunkName: "components/status-item" */).then(c => wrapFunctional(c.default || c))
+export const StatusMain = () => import('../..\\components\\Molecules\\productlist\\StatusMain.vue' /* webpackChunkName: "components/status-main" */).then(c => wrapFunctional(c.default || c))
+export const StatusProductList = () => import('../..\\components\\Molecules\\productlist\\StatusProductList.vue' /* webpackChunkName: "components/status-product-list" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

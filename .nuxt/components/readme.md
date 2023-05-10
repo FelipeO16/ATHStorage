@@ -7,6 +7,11 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
+- `<AddProduct>` | `<add-product>` (components/Organisms/addproduct/AddProduct.vue)
+- `<Cart>` | `<cart>` (components/Organisms/cart/Cart.vue)
+- `<ProductList>` | `<product-list>` (components/Organisms/productlist/ProductList.vue)
+- `<Sidebar>` | `<sidebar>` (components/Organisms/default/Sidebar.vue)
+- `<ShowQr>` | `<show-qr>` (components/Organisms/showqr/ShowQr.vue)
 - `<Logo>` | `<logo>` (components/Atoms/default/Logo.vue)
 - `<Notify>` | `<notify>` (components/Atoms/default/Notify.vue)
 - `<SidebarIcon>` | `<sidebar-icon>` (components/Atoms/default/SidebarIcon.vue)
@@ -26,8 +31,3 @@ You can directly use them in pages and other components without the need to impo
 - `<StatusItem>` | `<status-item>` (components/Molecules/productlist/StatusItem.vue)
 - `<StatusMain>` | `<status-main>` (components/Molecules/productlist/StatusMain.vue)
 - `<StatusProductList>` | `<status-product-list>` (components/Molecules/productlist/StatusProductList.vue)
-- `<AddProduct>` | `<add-product>` (components/Organisms/addproduct/AddProduct.vue)
-- `<Cart>` | `<cart>` (components/Organisms/cart/Cart.vue)
-- `<Sidebar>` | `<sidebar>` (components/Organisms/default/Sidebar.vue)
-- `<ProductList>` | `<product-list>` (components/Organisms/productlist/ProductList.vue)
-- `<ShowQr>` | `<show-qr>` (components/Organisms/showqr/ShowQr.vue)

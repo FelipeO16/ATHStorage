@@ -2,6 +2,21 @@
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   },
+  "AddProduct": {
+    "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
+  },
+  "Cart": {
+    "description": "Auto imported from components/Organisms/cart/Cart.vue"
+  },
+  "ProductList": {
+    "description": "Auto imported from components/Organisms/productlist/ProductList.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from components/Organisms/default/Sidebar.vue"
+  },
+  "ShowQr": {
+    "description": "Auto imported from components/Organisms/showqr/ShowQr.vue"
+  },
   "Logo": {
     "description": "Auto imported from components/Atoms/default/Logo.vue"
   },
@@ -58,20 +73,5 @@
   },
   "StatusProductList": {
     "description": "Auto imported from components/Molecules/productlist/StatusProductList.vue"
-  },
-  "AddProduct": {
-    "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
-  },
-  "Cart": {
-    "description": "Auto imported from components/Organisms/cart/Cart.vue"
-  },
-  "Sidebar": {
-    "description": "Auto imported from components/Organisms/default/Sidebar.vue"
-  },
-  "ProductList": {
-    "description": "Auto imported from components/Organisms/productlist/ProductList.vue"
-  },
-  "ShowQr": {
-    "description": "Auto imported from components/Organisms/showqr/ShowQr.vue"
   }
 }
