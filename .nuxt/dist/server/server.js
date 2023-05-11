@@ -122,13 +122,13 @@ module.exports =
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = require("vuex-module-decorators");
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("vuex-module-decorators");
+module.exports = require("vue");
 
 /***/ }),
 /* 2 */
@@ -509,7 +509,7 @@ __webpack_require__.d(__webpack_exports__, "pages", function() { return /* reexp
 __webpack_require__.d(__webpack_exports__, "cart", function() { return /* reexport */ store_accessor_cart; });
 
 // EXTERNAL MODULE: external "vuex-module-decorators"
-var external_vuex_module_decorators_ = __webpack_require__(1);
+var external_vuex_module_decorators_ = __webpack_require__(0);
 
 // EXTERNAL MODULE: ./store/darkmode.ts
 var darkmode = __webpack_require__(15);
@@ -566,7 +566,7 @@ const plugins = [initializer];
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__);
 
 
@@ -609,7 +609,7 @@ Darkmode = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__);
 
 
@@ -685,7 +685,7 @@ Dialogue = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _utils_nuxt_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
 
@@ -824,7 +824,7 @@ Products = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 
@@ -876,7 +876,7 @@ Pages = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex_mo
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _utils_nuxt_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
 
@@ -950,6 +950,31 @@ let Cart = class Cart extends vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1_
     return true;
   }
 
+  async buy({
+    title,
+    products
+  }) {
+    console.log(products);
+    const name = "Aussie Tiny Houses";
+    const email = "felipe16.12.1998@gmail.com";
+    const obs = "support@athstocktake.com";
+    console.log('title' + title);
+    let data = {
+      title,
+      products,
+      name,
+      email,
+      obs
+    };
+
+    try {
+      const infos = await _utils_nuxt_instance__WEBPACK_IMPORTED_MODULE_2__[/* $axios */ "a"].$post('/order', data);
+      return infos;
+    } catch (err) {
+      console.log(err.response);
+    }
+  }
+
 };
 
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__["Mutation"]], Cart.prototype, "setCartList", null);
@@ -975,6 +1000,10 @@ Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex_module_dec
 Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__["Action"])({
   rawError: true
 })], Cart.prototype, "remove", null);
+
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__["Action"])({
+  rawError: true
+})], Cart.prototype, "buy", null);
 
 Cart = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(vuex_module_decorators__WEBPACK_IMPORTED_MODULE_1__["Module"])({
   namespaced: true,
@@ -4495,11 +4524,6 @@ __webpack_require__.r(__webpack_exports__);
 var components_namespaceObject = {};
 __webpack_require__.r(components_namespaceObject);
 __webpack_require__.d(components_namespaceObject, "Tutorial", function() { return Tutorial; });
-__webpack_require__.d(components_namespaceObject, "AddProduct", function() { return AddProduct; });
-__webpack_require__.d(components_namespaceObject, "Cart", function() { return Cart; });
-__webpack_require__.d(components_namespaceObject, "Sidebar", function() { return Sidebar; });
-__webpack_require__.d(components_namespaceObject, "ProductList", function() { return ProductList; });
-__webpack_require__.d(components_namespaceObject, "ShowQr", function() { return ShowQr; });
 __webpack_require__.d(components_namespaceObject, "AddProductForm", function() { return AddProductForm; });
 __webpack_require__.d(components_namespaceObject, "QrCode", function() { return QrCode; });
 __webpack_require__.d(components_namespaceObject, "CartCategories", function() { return CartCategories; });
@@ -4519,9 +4543,14 @@ __webpack_require__.d(components_namespaceObject, "Logo", function() { return Lo
 __webpack_require__.d(components_namespaceObject, "Notify", function() { return Notify; });
 __webpack_require__.d(components_namespaceObject, "SidebarIcon", function() { return SidebarIcon; });
 __webpack_require__.d(components_namespaceObject, "ToggleDarkmode", function() { return ToggleDarkmode; });
+__webpack_require__.d(components_namespaceObject, "AddProduct", function() { return AddProduct; });
+__webpack_require__.d(components_namespaceObject, "Cart", function() { return Cart; });
+__webpack_require__.d(components_namespaceObject, "Sidebar", function() { return Sidebar; });
+__webpack_require__.d(components_namespaceObject, "ProductList", function() { return ProductList; });
+__webpack_require__.d(components_namespaceObject, "ShowQr", function() { return ShowQr; });
 
 // EXTERNAL MODULE: external "vue"
-var external_vue_ = __webpack_require__(0);
+var external_vue_ = __webpack_require__(1);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
 // EXTERNAL MODULE: external "ufo"
@@ -6181,11 +6210,6 @@ function mergeProperty(storeModule, moduleData, property) {
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
 const Tutorial = () => __webpack_require__.e(/* import() | components/tutorial */ 25).then(__webpack_require__.bind(null, 156)).then(c => wrapFunctional(c.default || c));
-const AddProduct = () => __webpack_require__.e(/* import() | components/add-product */ 1).then(__webpack_require__.bind(null, 147)).then(c => wrapFunctional(c.default || c));
-const Cart = () => __webpack_require__.e(/* import() | components/cart */ 3).then(__webpack_require__.bind(null, 149)).then(c => wrapFunctional(c.default || c));
-const Sidebar = () => __webpack_require__.e(/* import() | components/sidebar */ 15).then(__webpack_require__.bind(null, 145)).then(c => wrapFunctional(c.default || c));
-const ProductList = () => __webpack_require__.e(/* import() | components/product-list */ 12).then(__webpack_require__.bind(null, 146)).then(c => wrapFunctional(c.default || c));
-const ShowQr = () => __webpack_require__.e(/* import() | components/show-qr */ 14).then(__webpack_require__.bind(null, 150)).then(c => wrapFunctional(c.default || c));
 const AddProductForm = () => __webpack_require__.e(/* import() | components/add-product-form */ 2).then(__webpack_require__.bind(null, 129)).then(c => wrapFunctional(c.default || c));
 const QrCode = () => __webpack_require__.e(/* import() | components/qr-code */ 13).then(__webpack_require__.bind(null, 104)).then(c => wrapFunctional(c.default || c));
 const CartCategories = () => __webpack_require__.e(/* import() | components/cart-categories */ 4).then(__webpack_require__.bind(null, 88)).then(c => wrapFunctional(c.default || c));
@@ -6204,7 +6228,12 @@ const StatusProductList = () => __webpack_require__.e(/* import() | components/s
 const Logo = () => __webpack_require__.e(/* import() | components/logo */ 9).then(__webpack_require__.bind(null, 125)).then(c => wrapFunctional(c.default || c));
 const Notify = () => __webpack_require__.e(/* import() | components/notify */ 10).then(__webpack_require__.bind(null, 157)).then(c => wrapFunctional(c.default || c));
 const SidebarIcon = () => __webpack_require__.e(/* import() | components/sidebar-icon */ 16).then(__webpack_require__.bind(null, 100)).then(c => wrapFunctional(c.default || c));
-const ToggleDarkmode = () => __webpack_require__.e(/* import() | components/toggle-darkmode */ 24).then(__webpack_require__.bind(null, 127)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
+const ToggleDarkmode = () => __webpack_require__.e(/* import() | components/toggle-darkmode */ 24).then(__webpack_require__.bind(null, 127)).then(c => wrapFunctional(c.default || c));
+const AddProduct = () => __webpack_require__.e(/* import() | components/add-product */ 1).then(__webpack_require__.bind(null, 147)).then(c => wrapFunctional(c.default || c));
+const Cart = () => __webpack_require__.e(/* import() | components/cart */ 3).then(__webpack_require__.bind(null, 149)).then(c => wrapFunctional(c.default || c));
+const Sidebar = () => __webpack_require__.e(/* import() | components/sidebar */ 15).then(__webpack_require__.bind(null, 145)).then(c => wrapFunctional(c.default || c));
+const ProductList = () => __webpack_require__.e(/* import() | components/product-list */ 12).then(__webpack_require__.bind(null, 146)).then(c => wrapFunctional(c.default || c));
+const ShowQr = () => __webpack_require__.e(/* import() | components/show-qr */ 14).then(__webpack_require__.bind(null, 150)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
 
 function wrapFunctional(options) {
   if (!options || !options.functional) {

@@ -1,9 +1,4 @@
 export const Tutorial = () => import('../..\\components\\Tutorial.vue' /* webpackChunkName: "components/tutorial" */).then(c => wrapFunctional(c.default || c))
-export const AddProduct = () => import('../..\\components\\Organisms\\addproduct\\AddProduct.vue' /* webpackChunkName: "components/add-product" */).then(c => wrapFunctional(c.default || c))
-export const Cart = () => import('../..\\components\\Organisms\\cart\\Cart.vue' /* webpackChunkName: "components/cart" */).then(c => wrapFunctional(c.default || c))
-export const Sidebar = () => import('../..\\components\\Organisms\\default\\Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
-export const ProductList = () => import('../..\\components\\Organisms\\productlist\\ProductList.vue' /* webpackChunkName: "components/product-list" */).then(c => wrapFunctional(c.default || c))
-export const ShowQr = () => import('../..\\components\\Organisms\\showqr\\ShowQr.vue' /* webpackChunkName: "components/show-qr" */).then(c => wrapFunctional(c.default || c))
 export const AddProductForm = () => import('../..\\components\\Molecules\\addproduct\\AddProductForm.vue' /* webpackChunkName: "components/add-product-form" */).then(c => wrapFunctional(c.default || c))
 export const QrCode = () => import('../..\\components\\Molecules\\addproduct\\QrCode.vue' /* webpackChunkName: "components/qr-code" */).then(c => wrapFunctional(c.default || c))
 export const CartCategories = () => import('../..\\components\\Molecules\\cartlist\\CartCategories.vue' /* webpackChunkName: "components/cart-categories" */).then(c => wrapFunctional(c.default || c))
@@ -23,6 +18,11 @@ export const Logo = () => import('../..\\components\\Atoms\\default\\Logo.vue' /
 export const Notify = () => import('../..\\components\\Atoms\\default\\Notify.vue' /* webpackChunkName: "components/notify" */).then(c => wrapFunctional(c.default || c))
 export const SidebarIcon = () => import('../..\\components\\Atoms\\default\\SidebarIcon.vue' /* webpackChunkName: "components/sidebar-icon" */).then(c => wrapFunctional(c.default || c))
 export const ToggleDarkmode = () => import('../..\\components\\Atoms\\default\\ToggleDarkmode.vue' /* webpackChunkName: "components/toggle-darkmode" */).then(c => wrapFunctional(c.default || c))
+export const AddProduct = () => import('../..\\components\\Organisms\\addproduct\\AddProduct.vue' /* webpackChunkName: "components/add-product" */).then(c => wrapFunctional(c.default || c))
+export const Cart = () => import('../..\\components\\Organisms\\cart\\Cart.vue' /* webpackChunkName: "components/cart" */).then(c => wrapFunctional(c.default || c))
+export const Sidebar = () => import('../..\\components\\Organisms\\default\\Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
+export const ProductList = () => import('../..\\components\\Organisms\\productlist\\ProductList.vue' /* webpackChunkName: "components/product-list" */).then(c => wrapFunctional(c.default || c))
+export const ShowQr = () => import('../..\\components\\Organisms\\showqr\\ShowQr.vue' /* webpackChunkName: "components/show-qr" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

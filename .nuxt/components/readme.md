@@ -7,11 +7,6 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
-- `<AddProduct>` | `<add-product>` (components/Organisms/addproduct/AddProduct.vue)
-- `<Cart>` | `<cart>` (components/Organisms/cart/Cart.vue)
-- `<Sidebar>` | `<sidebar>` (components/Organisms/default/Sidebar.vue)
-- `<ProductList>` | `<product-list>` (components/Organisms/productlist/ProductList.vue)
-- `<ShowQr>` | `<show-qr>` (components/Organisms/showqr/ShowQr.vue)
 - `<AddProductForm>` | `<add-product-form>` (components/Molecules/addproduct/AddProductForm.vue)
 - `<QrCode>` | `<qr-code>` (components/Molecules/addproduct/QrCode.vue)
 - `<CartCategories>` | `<cart-categories>` (components/Molecules/cartlist/CartCategories.vue)
@@ -31,3 +26,8 @@ You can directly use them in pages and other components without the need to impo
 - `<Notify>` | `<notify>` (components/Atoms/default/Notify.vue)
 - `<SidebarIcon>` | `<sidebar-icon>` (components/Atoms/default/SidebarIcon.vue)
 - `<ToggleDarkmode>` | `<toggle-darkmode>` (components/Atoms/default/ToggleDarkmode.vue)
+- `<AddProduct>` | `<add-product>` (components/Organisms/addproduct/AddProduct.vue)
+- `<Cart>` | `<cart>` (components/Organisms/cart/Cart.vue)
+- `<Sidebar>` | `<sidebar>` (components/Organisms/default/Sidebar.vue)
+- `<ProductList>` | `<product-list>` (components/Organisms/productlist/ProductList.vue)
+- `<ShowQr>` | `<show-qr>` (components/Organisms/showqr/ShowQr.vue)

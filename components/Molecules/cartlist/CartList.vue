@@ -10,7 +10,7 @@
           <CartItem v-for="(item, index) in list" :key="index" :item="item" />
         </div>
         <div class="buy">
-          <button class="bg-green-500" >Buy</button>
+          <button class="bg-green-500" @click="buy(title)">Buy</button>
           <button class="bg-red-500" @click="cart.remove(title)">Remove</button>
         </div>
       </div>
@@ -21,6 +21,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { cart } from '@/store'
+import { Item } from '@/models'
 export default Vue.extend({
   props: {
     list: Array,
@@ -29,6 +30,20 @@ export default Vue.extend({
   data() {
     return {
       show: false,
+    }
+  },
+  methods:{
+    async buy(title: string) {
+      var products = [] as Array<object>
+      this.list.map((item: any) => {
+        products.push({
+          description: item.description,
+          quantity: item.quantity,
+        });
+      });
+      console.log(products)
+      await cart.buy({products, title})
+      this.show = false
     }
   },
   computed: {
