@@ -8,6 +8,7 @@
     <ProductCountMain />
     <Cart />
     <ShowQr />
+    <Logs />
   </div>
 </template>
 

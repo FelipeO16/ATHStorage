@@ -1,4 +1,4 @@
-exports.ids = [12,18,19,20,21,22,23];
+exports.ids = [13,19,20,21,22,23,24];
 exports.modules = {
 
 /***/ 101:
@@ -397,7 +397,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(134);
+var content = __webpack_require__(135);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -436,7 +436,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 128:
+/***/ 129:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -520,7 +520,7 @@ installComponents(component, {StatusHeader: __webpack_require__(101).default,Sta
 
 /***/ }),
 
-/***/ 133:
+/***/ 134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -532,7 +532,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 134:
+/***/ 135:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -547,7 +547,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 146:
+/***/ 149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -598,7 +598,7 @@ var componentNormalizer = __webpack_require__(5);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(133)
+  var style0 = __webpack_require__(134)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -619,7 +619,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var ProductList = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {StatusProductList: __webpack_require__(128).default})
+installComponents(component, {StatusProductList: __webpack_require__(129).default})
 
 
 /***/ }),

@@ -2,6 +2,18 @@
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   },
+  "Logo": {
+    "description": "Auto imported from components/Atoms/default/Logo.vue"
+  },
+  "Notify": {
+    "description": "Auto imported from components/Atoms/default/Notify.vue"
+  },
+  "SidebarIcon": {
+    "description": "Auto imported from components/Atoms/default/SidebarIcon.vue"
+  },
+  "ToggleDarkmode": {
+    "description": "Auto imported from components/Atoms/default/ToggleDarkmode.vue"
+  },
   "AddProductForm": {
     "description": "Auto imported from components/Molecules/addproduct/AddProductForm.vue"
   },
@@ -47,18 +59,6 @@
   "StatusProductList": {
     "description": "Auto imported from components/Molecules/productlist/StatusProductList.vue"
   },
-  "Logo": {
-    "description": "Auto imported from components/Atoms/default/Logo.vue"
-  },
-  "Notify": {
-    "description": "Auto imported from components/Atoms/default/Notify.vue"
-  },
-  "SidebarIcon": {
-    "description": "Auto imported from components/Atoms/default/SidebarIcon.vue"
-  },
-  "ToggleDarkmode": {
-    "description": "Auto imported from components/Atoms/default/ToggleDarkmode.vue"
-  },
   "AddProduct": {
     "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
   },
@@ -67,6 +67,9 @@
   },
   "Sidebar": {
     "description": "Auto imported from components/Organisms/default/Sidebar.vue"
+  },
+  "Logs": {
+    "description": "Auto imported from components/Organisms/logs/Logs.vue"
   },
   "ProductList": {
     "description": "Auto imported from components/Organisms/productlist/ProductList.vue"

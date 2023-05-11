@@ -86,13 +86,24 @@ export default class Cart extends VuexModule {
   public async buy({ title, products }: any ) {
     console.log(products)
     const name = "Aussie Tiny Houses"
-    const email = "felipe16.12.1998@gmail.com"
-    const obs = "support@athstocktake.com"
+    const email = "milton@aussietinyhouses.com.au"
+    const obs = email
     console.log('title'+title)
     let data = {title, products, name, email, obs}
     try {
       const infos = await $axios.$post('/order',data)
       return infos
+    } catch (err: any) {
+      console.log(err.response)
+    }
+  }
+
+  @Action({ rawError: true })
+  public async getLogs() {
+    try {
+      const infos = await $axios.$get('/logs')
+      console.log(infos.data[0])
+      return infos.data
     } catch (err: any) {
       console.log(err.response)
     }
