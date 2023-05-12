@@ -1,7 +1,7 @@
 <template>
   <div class="carts">
     <CartList
-      v-for="(suplier, index) in cart.$cartList"
+      v-for="(suplier, index) in cart"
       :key="index"
       :list="suplier"
       :title="index"
@@ -16,7 +16,7 @@ import { cart } from '@/store'
 export default Vue.extend({
   computed: {
     cart() {
-      return cart
+      return cart.$cartList
     },
   },
 })

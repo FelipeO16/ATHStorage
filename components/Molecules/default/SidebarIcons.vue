@@ -18,6 +18,7 @@ import {
   faCalculator,
   faCartPlus,
   faTriangleExclamation,
+  faLayerGroup,
   faPlus,
   faQrcode,
 } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +26,7 @@ import {
 export default Vue.extend({
   computed: {
     icons() {
-      return [faListUl, faPlus, faCalculator, faCartPlus, faTriangleExclamation, faQrcode]
+      return [faListUl, faPlus, faCalculator, faCartPlus, faLayerGroup, faTriangleExclamation, faQrcode]
     },
     page() {
       return pages.$page

@@ -2,17 +2,23 @@
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   },
-  "Logo": {
-    "description": "Auto imported from components/Atoms/default/Logo.vue"
+  "AddProduct": {
+    "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
   },
-  "Notify": {
-    "description": "Auto imported from components/Atoms/default/Notify.vue"
+  "Cart": {
+    "description": "Auto imported from components/Organisms/cart/Cart.vue"
   },
-  "SidebarIcon": {
-    "description": "Auto imported from components/Atoms/default/SidebarIcon.vue"
+  "Sidebar": {
+    "description": "Auto imported from components/Organisms/default/Sidebar.vue"
   },
-  "ToggleDarkmode": {
-    "description": "Auto imported from components/Atoms/default/ToggleDarkmode.vue"
+  "Logs": {
+    "description": "Auto imported from components/Organisms/logs/Logs.vue"
+  },
+  "ProductList": {
+    "description": "Auto imported from components/Organisms/productlist/ProductList.vue"
+  },
+  "ShowQr": {
+    "description": "Auto imported from components/Organisms/showqr/ShowQr.vue"
   },
   "AddProductForm": {
     "description": "Auto imported from components/Molecules/addproduct/AddProductForm.vue"
@@ -41,6 +47,18 @@
   "ProductCountMain": {
     "description": "Auto imported from components/Molecules/productcount/ProductCountMain.vue"
   },
+  "Logo": {
+    "description": "Auto imported from components/Atoms/default/Logo.vue"
+  },
+  "Notify": {
+    "description": "Auto imported from components/Atoms/default/Notify.vue"
+  },
+  "SidebarIcon": {
+    "description": "Auto imported from components/Atoms/default/SidebarIcon.vue"
+  },
+  "ToggleDarkmode": {
+    "description": "Auto imported from components/Atoms/default/ToggleDarkmode.vue"
+  },
   "StatusCategories": {
     "description": "Auto imported from components/Molecules/productlist/StatusCategories.vue"
   },
@@ -58,23 +76,5 @@
   },
   "StatusProductList": {
     "description": "Auto imported from components/Molecules/productlist/StatusProductList.vue"
-  },
-  "AddProduct": {
-    "description": "Auto imported from components/Organisms/addproduct/AddProduct.vue"
-  },
-  "Cart": {
-    "description": "Auto imported from components/Organisms/cart/Cart.vue"
-  },
-  "Sidebar": {
-    "description": "Auto imported from components/Organisms/default/Sidebar.vue"
-  },
-  "Logs": {
-    "description": "Auto imported from components/Organisms/logs/Logs.vue"
-  },
-  "ProductList": {
-    "description": "Auto imported from components/Organisms/productlist/ProductList.vue"
-  },
-  "ShowQr": {
-    "description": "Auto imported from components/Organisms/showqr/ShowQr.vue"
   }
 }

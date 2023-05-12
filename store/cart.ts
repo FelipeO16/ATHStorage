@@ -42,6 +42,37 @@ export default class Cart extends VuexModule {
     this.cart_list = { ...this.cart_list }
   }
 
+  // delete one item from cart object by item.code
+  @Mutation
+  private deleteItemCartList({supplier, item}: any): void {
+    const itemToDelete = item
+    if (this.cart_list[supplier]) {
+      this.cart_list[supplier].map((item: CartItem, index: number) => {
+        if (item && item.id === itemToDelete.id) {
+          this.cart_list[supplier].splice(index, 1)
+        }
+      });
+    }
+    this.cart_list = { ...this.cart_list }
+  }
+
+  // @Mutation
+  // private deleteItemCartList(supplier: string, item: CartItem): void {
+  //   this.cart_list[supplier].map((item: CartItem, index: number) => {
+  //     if (item.id === item.id) {
+  //       this.cart_list[index].splice(index, 1)
+  //       return
+  //     }
+  //   })
+  // }
+
+  // call deleteItemCartList as @Action
+  @Action({ rawError: true })
+  public removeOne({supplier, item}: any) {
+    console.log(item)
+    this.context.commit('deleteItemCartList', {supplier, item})
+  }
+
 
   @Action({ rawError: true })
   public async set() {

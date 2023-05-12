@@ -7,7 +7,7 @@
       <div v-show="show">
         <CartCategories />
         <div class="list">
-          <CartItem v-for="(item, index) in list" :key="index" :item="item" />
+          <CartItem v-for="(item, index) in list" :key="index" :item="item" :supplier="title" />
         </div>
         <div class="buy">
           <button class="bg-green-500" @click="buy(title)">Buy</button>
@@ -21,7 +21,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import { cart } from '@/store'
-import { Item } from '@/models'
 export default Vue.extend({
   props: {
     list: Array,
@@ -39,6 +38,7 @@ export default Vue.extend({
         products.push({
           description: item.description,
           quantity: item.quantity,
+          code: item.code,
         });
       });
       console.log(products)

@@ -35,7 +35,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      text: ['List', 'Add', 'Count', 'Cart', 'Logs', 'QR'],
+      text: ['List', 'Add', 'Count', 'Cart','Inventory', 'Logs', 'QR'],
     }
   },
 })
@@ -59,7 +59,7 @@ export default Vue.extend({
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 60px;
+  min-width: 60px;
   background-color: #555;
   color: #fff;
   text-align: center;

@@ -1,5 +1,5 @@
 <template>
-  <div class="email-logs" v-if="page == 4">
+  <div class="email-logs" v-if="page == 5">
     <!-- do a table responsive with 3 columns and th -->
     <table class="table table-striped table-hover">
       <thead>

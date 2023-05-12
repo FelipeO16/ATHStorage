@@ -4,13 +4,6 @@
  * Copyright 2022 Fonticons, Inc.
  */
 
-
-/*!
- * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2022 Fonticons, Inc.
- */
-
 /*!
  * qrcode.vue v3.3.3
  * A Vue.js component to generate QRCode.
@@ -62,4 +55,11 @@
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
+ */
+
+
+/*!
+ * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2022 Fonticons, Inc.
  */

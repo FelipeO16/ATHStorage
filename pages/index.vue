@@ -24,8 +24,7 @@ export default Vue.extend({
     },
   },
   async mounted() {
-    const respon = await products.add2()
-    console.log(respon)
+    await products.add2()
   },
 })
 </script>

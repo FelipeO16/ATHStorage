@@ -1,5 +1,5 @@
 <template>
-    <div class="show-list" v-if="page == 5">
+    <div class="show-list" v-if="page == 6">
       <div v-for="product in products.$productsList" :key="product">
         <div class="w-64 h-64 bg-white dark:bg-midnight-500 rounded-lg flex flex-col justify-center items-center">
           <div class="w-full flex justify-center">
